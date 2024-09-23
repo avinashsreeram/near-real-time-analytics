@@ -13,11 +13,25 @@ The system integrates multiple AWS services to facilitate real-time data streami
 - **AWS Lambda**: Processes and transforms streaming data.
 - **Amazon QuickSight**: Used for creating dynamic visualizations and dashboards to represent transactional data.
 
+## System Latency
+The end-to-end latency from data generation to visualization in Amazon QuickSight is approximately 15 minutes, primarily due to the data processing pipeline and refresh rates in QuickSight. This setup is optimal for near real-time analytics on high-velocity data streams in financial transaction scenarios.
+
+## Architecture Diagram
+Below is the system architecture diagram that illustrates the data flow and integration of AWS services:
+
+![Architecture Diagram](link-to-your-diagram-image)
+
 ## Data Flow
 1. **Data Source**: Transactional data is simulated from a static CSV file, representing real-world financial transactions.
 2. **Transformation**: Data is converted into JSON format suitable for streaming.
 3. **Streaming**: Utilizes Python’s multiprocessing capabilities to emulate real-time data flow, pushing data to AWS Kinesis Firehose.
 4. **Visualization**: Data is visualized in Amazon QuickSight, providing insights into patterns and anomalies.
+
+## Visualizations and Dashboards
+Here are some screenshots from the Amazon QuickSight dashboards created as part of this project:
+
+![Dashboard Screenshot 1](link-to-screenshot)
+![Dashboard Screenshot 2](link-to-screenshot)
 
 ## Goals and Objectives
 - **Real-time Analytics**: Provide financial institutions with the ability to perform real-time analytics on credit card transactions.
